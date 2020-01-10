@@ -1,0 +1,50 @@
+.logo-img{
+    height: 50px;
+    width: 50px;
+}
+#nav{
+    margin-left: 380px;
+}
+.log{
+    margin-top: 50px;
+}
+#services{
+    margin-left: 50px;
+}
+.text-color{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#login-icon{
+    margin-left: 20px;
+    
+}
+#nav{
+    font-size: 20px;
+    color: white;
+}
+.dropdown {
+    position: relative;
+    margin-top: 4.5px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+}
+  
+.dropdown-content a {
+    color:white;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    background-color:#343a40;
+    /* width: 200px; */
+  }
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1;}
+  

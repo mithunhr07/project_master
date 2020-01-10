@@ -1,0 +1,66 @@
+#homepage_img{
+    height:550px;
+    width: 1300px;
+}
+.text-block {
+    position: absolute;
+    bottom:330px;
+    right: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 45px;
+    color: white; 
+ }
+ .arrow{
+    position: absolute;
+    bottom:130px;
+    right: 400px;
+    padding-right: 280px;
+    font-size: 35px;
+    height: 200px;
+    color: white; 
+ }
+ #section1{
+     margin-top: 200px;
+ }
+ .spacing{
+     margin-top: 200px;
+ }
+  .card-body1{
+    height:300px;
+    width: 250px;
+  }
+  .card-title{
+      font-size: 35px;
+  }
+  .img-fluid{
+      height: 300px;
+      width: 800px;
+  }
+  #inverted_comma_icon{
+      font-size: 50px;
+      margin-left: 600px;
+  }
+ .services{
+      margin-left: 450px;
+      font-size: 15px;
+  }
+.carousel-inner img {
+    width: 700px;
+    height:310px;
+}
+.carousel_container{
+    width: 700px;
+    height:310px;
+}
+#Machinery_button{
+    margin-left:70px;
+}
+#Service_button{
+    margin-left:80px;
+}
+.card_edit{
+    width: 244px;
+    margin-left: 95px;
+
+}

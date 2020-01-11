@@ -18,11 +18,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-   {/* <Router> 
+   <Router> 
    <Switch>
-   <Route exact path='/LoginPage' component={LoginPage}></Route>
+   <Route exact path='/' component={LoginPage}></Route>
    <Route exact path='/RegisterPage' component={RegisterPage}></Route>
-   <Route exact path='/' component={HomePage}></Route>
+   <Route exact path='/HomePage' component={HomePage}></Route>
    <Route exact path='/Planting_machines' component={Planting_machines}></Route>
    <Route exact path='/Irrigation_page' component={Irrigation_page}></Route>
    <Route exact path='/Harvest_page' component={Harvest_page}></Route>
@@ -30,9 +30,10 @@ class App extends Component {
    <Route exact path='/Miscellaneous_page' component={Miscellaneous_page}></Route>
    <Route exact path='/About_page' component={About_page}></Route>
    <Route exact path='/Contact_page' component={Contact_page}></Route>
+   <Route exact path='/Payment_page' component={Payment_page}></Route>
    </Switch>
- </Router>  */}
- <Calendar/>
+ </Router> 
+ {/* <Calendar/> */}
  {/* <Payment_page/> */}
 </div>
     );

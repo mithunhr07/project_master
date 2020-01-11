@@ -1,0 +1,63 @@
+.payment_img{
+    height: 475px;
+    width: 335px;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+#container_width{
+    width: 600px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.card_container1{
+    background-color: lightgrey;
+}
+.billing_align{
+    margin-left: 65px;
+}
+.payment_align{
+    margin-left: 80px;
+}
+.card_container2{
+    background-color: lightgrey;
+    margin-left: 80px;
+}
+.input_width{
+    width:250px;
+    height: 26px;
+}
+.input_width1{
+    width:240px;
+    height: 26px;
+}
+.input_width2{
+    width:105px;
+    height: 26px;
+}
+#backgr_color{
+    background-color:#bdbdbd;
+    height: 478px;
+    margin-right: 137px;
+    margin-top: -476px;
+    margin-bottom: 50px;
+    margin-left: 515px;
+    padding-right: 44px;
+
+}
+#button{
+    background-color: lightgrey;
+    margin-top: 20px;
+    width: 600px;
+    font-size: 12px;
+}
+.bill_text{
+    margin-left: 340px;
+    font-size: 22px;
+    color: #ff4141;
+}
+.service_text{
+    margin-left: 400px;
+    font-size: 17px;
+    color: #ff4141
+    ;
+}

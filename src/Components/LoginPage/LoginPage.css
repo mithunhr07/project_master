@@ -1,0 +1,18 @@
+#signup_container{
+    background-color: lightgrey;
+    margin-bottom: 130px;
+    margin-top: 50px;
+}
+.error_color{
+    color: red;
+}
+.btn_align{
+    margin-left: 20px;
+    width: 65px;
+}
+.btn_width{
+    width: 75px;
+}
+#cancel_btn{
+    margin-left: 65px;
+}

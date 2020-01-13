@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import './Register.css';
+import './Register.css';
 import BrowserHistory from '../Utils/BrowserHistory';
 import {registerHandle} from  '../../Action/Signup_action'
 import FooterPage from '../Footer/Footer';
@@ -137,39 +137,36 @@ render() {
 return (
   <div>
     <Navbar/>
-<div className="register">
-<div class="container">
 <div class="row">
 <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4"></div>
-<div class="col-sm-4 col-lg-4 col-md-4 col-xs-4 frm">
+<div class="col-sm-2 col-lg-2 col-md-2 col-xs-2 frm">
 <h1>Signup</h1>
 <div className="regcont">
 <div><label ><b>First Name</b></label><br /></div>
 <div><input type="text" name="Firstname" className="one" onChange={this.onHandleChange} /><br /></div>
-<div><p >{this.state.ferr}</p></div>
+<div><p id="errclr">{this.state.ferr}</p></div>
 <div><label><b>Last Name</b></label><br /></div>
 <div><input type="text" name="Lastname" className="one" onChange={this.onHandleChange} /><br /></div>
-<div> <p >{this.state.lerr}</p></div>
+<div> <p id="errclr" >{this.state.lerr}</p></div>
 
 <div><label ><b>Email</b></label><br /></div>
 <div> <input type="text" name="email" className="one" onChange={this.onHandleChange} /><br /></div>
-<div> <p >{this.state.uerr}</p></div>
+<div> <p id="errclr">{this.state.uerr}</p></div>
 <div><label ><b>Password</b></label><br /></div>
 <div> <input type="password" name="password" className="one" onChange={this.onHandleChange} /><br /><br /></div>
-<div> <p >{this.state.perr}</p></div>
+<div> <p id="errclr">{this.state.perr}</p></div>
 <div> <label ><b>Confirmpassword</b></label><br /></div>
 <div> <input type="password" name="Confirmpassword" className="one" onChange={this.onHandleChange} /><br /><br /></div>
-<div> <p >{this.state.cperr}</p></div>
+<div> <p id="errclr">{this.state.cperr}</p></div>
 <div> <label ><b>Mobilenumber</b></label><br /></div>
 <div> <input type="text" name="Mobnum" className="one" onChange={this.onHandleChange} /><br /><br /></div>
 </div>
 <a href="" onClick={this.onHandleClicks}>you have already account</a>
-<p >{this.state.phnerr}</p>
-<button onClick={this.onHandleClick} className="btn1"><b>Register</b></button><a href="" onClick={this.onHandleClicksCancel}>Cancel</a>
+<p id="errclr" >{this.state.phnerr}</p>
+<button onClick={this.onHandleClick} className="btn1"><b>Register</b></button>
+<a href="" onClick={this.onHandleClicksCancel} className="canbtn">Cancel</a>
 </div>
 <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
-</div>
-</div>
 </div>
 </div>
 <FooterPage/>

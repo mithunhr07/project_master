@@ -10,7 +10,7 @@ import Cultivation_page from './Components/Cultivation_page/Cultivation_page';
 import Miscellaneous_page from './Components/Miscellaneous_page/Miscellaneous_page';
 import About_page from './Components/About_page/About_page';
 import Contact_page from './Components/Contact_page/Contact_page';
-import Calendar from './Components/Calendar/Calendar';
+import Calendar from './Components/Calendar/Calendar_page';
 import Payment_page from './Components/Payment_page/Payment_page';
 
 
@@ -34,7 +34,7 @@ class App extends Component {
    </Switch>
  </Router> 
  {/* <Calendar/> */}
- {/* <Payment_page/> */}
+ {/* <RegisterPage/> */}
 </div>
     );
   }

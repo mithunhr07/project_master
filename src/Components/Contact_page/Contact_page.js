@@ -4,8 +4,40 @@ import logo from '../Images/logo.png';
 import company from '../Images/company.jpg';
 import Navbar from '../Navbar/Navbar';
 import FooterPage from '../Footer/Footer';
+import axios from "axios";
+import BrowserHistory from '../Utils/BrowserHistory'
 
 class Contact_page extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            name:'',
+            phone_number:'',
+            email:'',
+            message:'',
+        };
+    }
+    onHandleChange=(e)=>{
+        this.setState({[e.target.name]:e.target.value});
+    }
+    onHandleClick=()=>{
+        debugger;
+        // const {name,phone_number,email,message}=this.state;
+        const payload={Name:this.state.name,Mobnum:this.state.phone_number,email:this.state.email,Message:this.state.message}
+        console.log(payload)
+        const options = {
+            url: 'http://localhost:8008/Contact',
+            method: 'POST',
+            data: payload
+            };
+            axios(options)
+            .then(response => {
+            console.log(response.status);
+            // sessionStorage.setItem('authentication', response.data.token)
+                // sessionStorage.setItem('userEmail', response.data.email)
+            // BrowserHistory.push('/HomePage')
+          });
+    }
     render() {
         return (
             <div>
@@ -28,26 +60,26 @@ class Contact_page extends Component {
                   <div class="row">
       <div class="col">
       <label>Enter Your Name</label>
-        <input type="text3" class="form-control" id="email" placeholder="Enter your name" />
+        <input type="text3" class="form-control" name="name" id="email" placeholder="Enter your name" onChange={this.onHandleChange} />
       </div>
       <div class="col">
       <label>Enter Your Phone Number</label>
-        <input type="number" class="form-control" placeholder="Enter your phone number"/>
+        <input type="number" class="form-control" name="phone_number" placeholder="Enter your phone number" onChange={this.onHandleChange}/>
       </div>
     </div>
     <div class="row">
         <div class="col">
         <label>Enter Your Email</label>
-        <input type="@gmail.com" class="form-control" id="email" placeholder="Enter your email" name="email"/>
+        <input type="@gmail.com" class="form-control" id="email" name="email" placeholder="Enter your email" name="email" onChange={this.onHandleChange}/>
         </div>
     </div>
     <div class="row">
         <div class="col">
         <label>Type Your Message Here</label>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
+        <textarea name="message" class="form-control" rows="5"  id="comment" onChange={this.onHandleChange}></textarea>
         </div>
     </div>
-    <button type="submit" className="button_align1">Submit</button>
+    <button type="submit" className="button_align1" onClick={this.onHandleClick}>Submit</button>
                 </form>
             </div>
             </div>

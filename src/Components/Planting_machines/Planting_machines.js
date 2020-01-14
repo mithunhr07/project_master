@@ -22,7 +22,7 @@ class Planting_machines extends Component {
       <h4 class="card-title">Potato Planter</h4>
       <p class="card-text">It is mounted on 3 points linkage system,takes the motion from its own wheel.
        you can work on the light soil and heavy soil at 5km/h.</p>
-      <a href="#" class="btn btn-primary">Book Now</a>
+      <a href="Calendar" class="btn btn-primary">Book Now</a>
     </div>
   </div>
   </div>
@@ -36,7 +36,7 @@ class Planting_machines extends Component {
       <h4 class="card-title">AgriMec Planter</h4>
       <p class="card-text">It is an Universal Type can be used for cotton, corn,
         soy bean, etc.It is maintenance free machine and it is lower model of pneumatic seed drill.</p>
-      <a href="#" class="btn btn-primary">Book Now</a>
+      <a href="Calendar" class="btn btn-primary">Book Now</a>
     </div>
   </div>
   </div>
@@ -51,7 +51,7 @@ class Planting_machines extends Component {
       <p class="card-text">Agrional Trailed Mechanical Seed Drill, pulled by tractor and
          similar seeds together with fertilizer and depth continuously,thus how it works with supported machine. Click below to book now.
      </p>
-      <a href="#" class="btn btn-primary">Book Now</a>
+      <a href="Calendar" class="btn btn-primary">Book Now</a>
     </div>
   </div>
   </div>
@@ -66,7 +66,7 @@ class Planting_machines extends Component {
       <p class="card-text">Agrional Mounted Precision Pneumatic Planter can precisely sow every kind of seeds
        in any sowing space and at any row space.
      </p>
-      <a href="#" class="btn btn-primary">Book Now</a>
+      <a href="Calendar" class="btn btn-primary">Book Now</a>
     </div>
   </div>
   </div>

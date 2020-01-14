@@ -12,17 +12,20 @@ import About_page from './Components/About_page/About_page';
 import Contact_page from './Components/Contact_page/Contact_page';
 import Calendar from './Components/Calendar/Calendar_page';
 import Payment_page from './Components/Payment_page/Payment_page';
+import { Admin_page } from './Components/Admin_page/Admin_page';
+import CheckoutForm from './Components/CheckoutForm/CheckoutForm';
+
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-   <Router> 
+   {/* <Router> 
    <Switch>
-   <Route exact path='/' component={LoginPage}></Route>
+   <Route exact path='/LoginPage' component={LoginPage}></Route>
    <Route exact path='/RegisterPage' component={RegisterPage}></Route>
-   <Route exact path='/HomePage' component={HomePage}></Route>
+   <Route exact path='/' component={HomePage}></Route>
    <Route exact path='/Planting_machines' component={Planting_machines}></Route>
    <Route exact path='/Irrigation_page' component={Irrigation_page}></Route>
    <Route exact path='/Harvest_page' component={Harvest_page}></Route>
@@ -31,10 +34,14 @@ class App extends Component {
    <Route exact path='/About_page' component={About_page}></Route>
    <Route exact path='/Contact_page' component={Contact_page}></Route>
    <Route exact path='/Payment_page' component={Payment_page}></Route>
+   <Route exact path='/Calendar' component={Calendar}></Route>
    </Switch>
- </Router> 
+ </Router>  */}
  {/* <Calendar/> */}
  {/* <RegisterPage/> */}
+ {/* <Admin_page/> */}
+ <CheckoutForm/>
+
 </div>
     );
   }

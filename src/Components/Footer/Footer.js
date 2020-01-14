@@ -33,7 +33,7 @@ const FooterPage = () => {
             </ul>
           </MDBCol>
           <MDBCol md="3">
-          <button type="button" className="btn btn-outline-primary"><a href="/Payment_page">BOOK A MACHINERY</a></button>
+          <button type="button" className="btn btn-outline-primary"><a href="/Planting_machines">BOOK A MACHINERY</a></button>
           </MDBCol>
           <MDBCol md="1" className="font-size">
           <a href="#" className="fb_icon"><i class="fa fa-facebook"></i></a>

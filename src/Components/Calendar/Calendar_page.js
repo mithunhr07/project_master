@@ -1,53 +1,30 @@
-// import React, { Component } from "react";
-// import Calendar from "react-big-calendar";
-// import moment from "moment";
-// import './Calendar.css';
-// const withDragAndDrop = require('react-big-calendar/lib/addons/dragAndDrop');
-// import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
-// import "react-big-calendar/lib/css/react-big-calendar.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './Calendar.css';
+import BrowserHistory from '../Utils/BrowserHistory';
 
-// const localizer = Calendar.momentLocalizer(moment);
-// const DnDCalendar = withDragAndDrop(Calendar);
+import { Calendar, CalendarCell, CalendarWeekCell, CalendarNavigationItem, CalendarHeaderTitle, DateInput, DatePicker, TimePicker, MultiViewCalendar, DateRangePicker, DateTimePicker } from '@progress/kendo-react-dateinputs'
+import '@progress/kendo-react-intl'
+import '@progress/kendo-react-tooltip'
+import '@progress/kendo-react-common'
+import '@progress/kendo-react-popup'
+import '@progress/kendo-date-math'
+import '@progress/kendo-react-dropdowns'
 
-// class Calendar_page extends Component {
-//   state = {
-//     events: [
-//       {
-//         start: new Date(),
-//         end: new Date(moment().add(1, "days")),
-//         title: "Some title"
-//       }
-//     ]
-//   };
+class Calender extends React.Component {
+    onHandleClicks = (e) => {
 
-//   onEventResize = (type, { event, start, end, allDay }) => {
-//     this.setState(state => {
-//       state.events[0].start = start;
-//       state.events[0].end = end;
-//       return { events: state.events };
-//     });
-//   };
+        BrowserHistory.push('/Payment_page'); 
+        
+        }
+    render() {
+        return(
+            <div className="example-wrapper" id="calendar">
+               <DateTimePicker />
+               <button onClick={this.onHandleClicks} className="btn_align"><b>Next</b></button>
+            </div>
+        )
+    }
+}
 
-//   onEventDrop = ({ event, start, end, allDay }) => {
-//     console.log(start);
-//   };
-
-//   render() {
-//     return (
-//       <div className="App">
-//         <DnDCalendar
-//           defaultDate={new Date()}
-//           defaultView="month"
-//           events={this.state.events}
-//           localizer={localizer}
-//           onEventDrop={this.onEventDrop}
-//           onEventResize={this.onEventResize}
-//           resizable
-//           style={{ height: "100vh" }}
-//         />
-//       </div>
-//     );
-//   }
-// }
-
-// export default Calendar_page;
+export default Calender;

@@ -16,3 +16,8 @@
 #cancel_btn{
     margin-left: 65px;
 }
+.background{
+    background:url('../Images/background.jpeg')no-repeat;
+    width: 1000px;
+    height: 1000px;
+}

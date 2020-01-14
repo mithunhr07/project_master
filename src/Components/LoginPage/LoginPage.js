@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './LoginPage.css';
+import background from '../Images/background.jpeg';
 import BrowserHistory from '../Utils/BrowserHistory';
 import {loginHandle} from  '../../Action/Login_action';
 import FooterPage from '../Footer/Footer';
@@ -121,7 +122,7 @@ BrowserHistory.push('/HomePage')
 
 render() {
 return (
-  <div>
+  <div >
     <Navbar/>
 <div>
 <div class="row">

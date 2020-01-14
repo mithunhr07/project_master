@@ -23,7 +23,7 @@ class Cultivation_page extends Component {
   <p class="card-text">The potato is the largest vegetable which very quickly required mechanized planting, 
   first of all using simple planters with cups on a belt. This was followed by belt planters with electronic control for
    high speed planting.</p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>
@@ -38,7 +38,7 @@ class Cultivation_page extends Component {
   <p class="card-text">Weed control machine that uses computer 
   technology and a spinning blade to remove weeds. Note the disc-shaped cultivation blade with a notched cut-out to
    allow the blade to spin around transplanted cabbage.</p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>
@@ -54,7 +54,7 @@ class Cultivation_page extends Component {
   different methods with different level of water and labour requirement. If you want to do rice cultivation then 
   here is the complete guide on scientifically.
  </p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>
@@ -70,7 +70,7 @@ class Cultivation_page extends Component {
   This can be lifted or lowered by the hydraulic system of the tractor.If you want to do cultivation then 
   here is the complete guide on scientifically.
  </p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>

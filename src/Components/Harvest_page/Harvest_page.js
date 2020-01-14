@@ -22,7 +22,7 @@ class Harvest_page extends Component {
   <h4 class="card-title">Raggi-Cut</h4>
   <p class="card-text">The Greaves power reaper is a high performing farm equipment. It is powered by the powerful Greaves
    Engine. It is suitable for the harvesting of Ragi. It gives very high speed cutting productivity with minimum lossage.Click below button to book now.</p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>
@@ -37,7 +37,7 @@ class Harvest_page extends Component {
   <p class="card-text">The combine harvester consists of cutting unit, threshing unit and cleaning and grain handling units.
    The cutting section includes reel,an auger and a feeder conveyer.paddy harvest through Super-SMS(Super straw management system)
     equipment attached to Combine Harvester.</p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>
@@ -52,7 +52,7 @@ class Harvest_page extends Component {
   <p class="card-text">The combine harvester consists of a cutting unit, threshing unit and cleaning and grain handling units.
    The cutting section is specially designed to harvest maize crop and the header can be fitted to conventional grain combines.
  </p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>
@@ -67,7 +67,7 @@ class Harvest_page extends Component {
   <p class="card-text">The combine harvester consists of cutting unit, threshing unit and cleaning and grain handling units.
    The cutting section includes reel, cutter bar, an auger and a feeder conveyer. Threshing section has threshing cylinder, concave. 
  </p>
-  <a href="#" class="btn btn-primary">Book Now</a>
+  <a href="Calendar" class="btn btn-primary">Book Now</a>
 </div>
 </div>
 </div>

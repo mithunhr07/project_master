@@ -14,6 +14,7 @@ import Calendar from './Components/Calendar/Calendar_page';
 import Payment_page from './Components/Payment_page/Payment_page';
 import { Admin_page } from './Components/Admin_page/Admin_page';
 import CheckoutForm from './Components/CheckoutForm/CheckoutForm';
+import {Elements, StripeProvider} from 'react-stripe-elements';
 
 
 
@@ -21,11 +22,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-   {/* <Router> 
+   <Router> 
    <Switch>
-   <Route exact path='/LoginPage' component={LoginPage}></Route>
+   <Route exact path='/' component={LoginPage}></Route>
    <Route exact path='/RegisterPage' component={RegisterPage}></Route>
-   <Route exact path='/' component={HomePage}></Route>
+   <Route exact path='/HomePage' component={HomePage}></Route>
    <Route exact path='/Planting_machines' component={Planting_machines}></Route>
    <Route exact path='/Irrigation_page' component={Irrigation_page}></Route>
    <Route exact path='/Harvest_page' component={Harvest_page}></Route>
@@ -36,13 +37,15 @@ class App extends Component {
    <Route exact path='/Payment_page' component={Payment_page}></Route>
    <Route exact path='/Calendar' component={Calendar}></Route>
    </Switch>
- </Router>  */}
- {/* <Calendar/> */}
- {/* <RegisterPage/> */}
- {/* <Admin_page/> */}
- <CheckoutForm/>
-
-</div>
+ </Router>  
+ <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+        <div className="example">
+          <Elements>
+            <CheckoutForm />
+          </Elements>
+        </div>
+      </StripeProvider>
+      </div>
     );
   }
 }

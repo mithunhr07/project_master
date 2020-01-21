@@ -5,13 +5,13 @@ import BrowserHistory from '../Utils/BrowserHistory';
 import {registerHandle} from  '../../Action/Signup_action'
 import FooterPage from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
-
+import axios from "axios";
 
 class RegisterPage extends Component {
 constructor(props) {
 super(props);
 this.state = {
-Firstname: '',
+username: '',
 Lastname: '',
 email: '',
 password: '',
@@ -48,7 +48,7 @@ onHandleClick = (e) => {
 debugger;
 e.preventDefault();
 const payload = {
-Firstname: this.state.Firstname,
+username: this.state.username,
 Lastname: this.state.Lastname,
 email: this.state.email,
 password: this.state.password,
@@ -65,9 +65,9 @@ Mobnum: this.state.Mobnum
 
 // })
 
-if (this.state.Firstname.length === 0 && this.state.Lastname.length === 0 && this.state.email.length === 0 && this.state.password.length === 0 && this.state.Confirmpassword.length === 0 && this.state.Mobnum.length === 0) {
+if (this.state.username.length === 0 && this.state.Lastname.length === 0 && this.state.email.length === 0 && this.state.password.length === 0 && this.state.Confirmpassword.length === 0 && this.state.Mobnum.length === 0) {
 this.setState({
-ferr: "Firstname is required", 
+usererr: "username is required", 
 lerr: "Lastname is required",
 uerr: "Email is required",
 perr: "Password is required",
@@ -76,14 +76,14 @@ phnerr: "Phonumber is required"
 
 })
 }
-else if (this.state.Firstname.length === 0) {
-this.setState({ ferr: "Firstname is required" })
+else if (this.state.username.length === 0) {
+this.setState({ usererr: "Username is required" })
 }
 else if (this.state.Lastname.length === 0) {
 this.setState({ lerr: "Lastname is required" })
 }
 else if (this.state.email.length === 0) {
-this.setState({ uerr: "Username is required" })
+this.setState({ uerr: "mail address is required" })
 }
 else if (this.state.password.length === 0) {
 this.setState({ perr: "Password is required" })
@@ -95,10 +95,10 @@ else if (this.state.Mobnum.length === 0) {
 this.setState({ phnerr: "Password is required" })
 }
 
-else if (!this.state.Firstname.match(/^[A-Za-z]{5,15}$/)) {
-this.setState({ ferr: "Please enter the valid fname" })
+else if (!this.state.username.match(/^[A-Za-z]{5,15}$/)) {
+this.setState({ ferr: "Please enter the valid username" })
 }
-else if (!this.state.Lastname.match(/^[A-Za-z]{2,15}$/)) {
+else if (!this.state.Lastname.match(/^[A-Za-z]{1,15}$/)) {
 this.setState({ lerr: "Please enter the valid lname" })
 }
 else if (!this.state.email.match(/^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]$/)) {
@@ -120,15 +120,15 @@ this.Loginaction.props.success("Register Successfully")
 }
 this.props.registerHandle(payload);
 
-// const url = "http://localhost:4013/Signup"
-// return axios({
-// method: 'POST',
-// url,
-// data: reqst
-// }).then(async (res) => {
-// console.log(res);
+const url = "http://localhost:8008/Signup"
+return axios({
+method: 'POST',
+url,
+data: payload
+}).then(async (res) => {
+console.log(res);
 // BrowserHistory.push('/login')
-// })
+})
 
 }
 
@@ -142,9 +142,9 @@ return (
 <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2 frm">
 <h1>Signup</h1>
 <div className="regcont">
-<div><label ><b>First Name</b></label><br /></div>
-<div><input type="text" name="Firstname" className="one" onChange={this.onHandleChange} /><br /></div>
-<div><p id="errclr">{this.state.ferr}</p></div>
+<div><label ><b>User Name</b></label><br /></div>
+<div><input type="text" name="username" className="one" onChange={this.onHandleChange} /><br /></div>
+<div><p id="errclr">{this.state.usererr}</p></div>
 <div><label><b>Last Name</b></label><br /></div>
 <div><input type="text" name="Lastname" className="one" onChange={this.onHandleChange} /><br /></div>
 <div> <p id="errclr" >{this.state.lerr}</p></div>

@@ -12,9 +12,14 @@ import About_page from './Components/About_page/About_page';
 import Contact_page from './Components/Contact_page/Contact_page';
 import Calendar from './Components/Calendar/Calendar_page';
 import Payment_page from './Components/Payment_page/Payment_page';
-import { Admin_page } from './Components/Admin_page/Admin_page';
-import CheckoutForm from './Components/CheckoutForm/CheckoutForm';
+
+
+import Payment from './Components/CheckoutForm/Payment';
 import {Elements, StripeProvider} from 'react-stripe-elements';
+import Admintable from './Components/AdminPage/Admintable';
+import Adminform from './Components/AdminPage/Adminform';
+import Mithun from './Components/Mithun';
+import Checkoutform from './Components/CheckoutForm/CheckoutForm';
 
 
 
@@ -36,15 +41,17 @@ class App extends Component {
    <Route exact path='/Contact_page' component={Contact_page}></Route>
    <Route exact path='/Payment_page' component={Payment_page}></Route>
    <Route exact path='/Calendar' component={Calendar}></Route>
+   <Route exact path='/Checkoutform' component={Checkoutform}></Route>
+   <Route exact path='/admintable' component={Admintable}></Route>
+   <Route exact path='/adminform' component={Adminform}></Route>
+  
+
+
    </Switch>
  </Router>  
- <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
-        <div className="example">
-          <Elements>
-            <CheckoutForm />
-          </Elements>
-        </div>
-      </StripeProvider>
+
+
+ 
       </div>
     );
   }

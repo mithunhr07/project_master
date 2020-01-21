@@ -1,34 +1,25 @@
-import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import React, { Component } from 'react';
+import { Elements, StripeProvider } from 'react-stripe-elements';
+import Payment from './Payment';
+import Mithun from '../Mithun';
+class Checkoutform extends Component{
+    render() {
+   return(
+        <div>
+             <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+          <div className="example">
+            <Elements>
+            <Mithun/>
+            </Elements>
+          </div>
+        </StripeProvider>
+        </div>
 
-class CheckoutForm extends Component {
-  constructor(props) {
-    super(props);
-    this.submit = this.submit.bind(this);
-  }
-  
-  async submit(ev) {
-    let {token} = await this.props.stripe.createToken({name: "Name"});
-    let response = await fetch("/charge", {
-      method: "POST",
-      headers: {"Content-Type": "text/plain"},
-      body: token.id
-    });
-  
-    if (response.ok){
-      alert("Purchase Complete!");
+
+   )
+
     }
-  }
 
-  render() {
-    return (
-      <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
-        <CardElement/>
-        <button onClick={this.submit}>Purchase</button>
-      </div>
-    );
-  }
-}
 
-export default injectStripe(CheckoutForm);
+} 
+export default Checkoutform;

@@ -4,7 +4,7 @@ const initialState={
     // email:'',
     password:'',
     // Confirmpassword:'',
-    Mobnum:''
+    username:''
     }
     
     export default(state = initialState,action)=>{
@@ -17,7 +17,7 @@ const initialState={
     // email:action.payload.email,
     password:action.payload.password,
     // Confirmpassword:action.payload.Confirmpassword,
-    Mobnum:action.payload.Mobnum
+    username:action.payload.username
     }
     }
     default:

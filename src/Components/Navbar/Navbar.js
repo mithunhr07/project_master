@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import BrowserHistory from '../Utils/BrowserHistory';
 import './Navbar.css';
 
 import logo from '../Images/logo_image.jpeg'
 
 class Navbar extends Component {
+  logout=()=>{
+    sessionStorage.removeItem('authentication')
+    BrowserHistory.push('/')
+  }
     render() {
         return (
             <div>
@@ -42,6 +47,10 @@ class Navbar extends Component {
     <li class="nav-item" id="services">
       <a class="nav-link" href="Contact_page">Contact Us</a>
     </li>
+    <li class="nav-item"  id="services">
+      <a class="nav-link"  onClick={this.logout}>Logout</a>
+    </li>
+    
   </ul>
 </nav>
 </div>

@@ -5,13 +5,14 @@
     margin-top: 10px;
 }
 #container_width{
-    width: 600px;
+    width: 270px;
     margin-left: 30px;
     margin-top: 30px;
 }
 .card_container1{
     background-color: lightgrey;
-    height: 317px;
+    height: 335px;
+    margin-left: 46px;
 }
 .billing_align{
     margin-left: 65px;
@@ -19,30 +20,31 @@
 .payment_align{
     margin-left: 80px;
 }
-.card_container2{
+/* .card_container2{
     background-color: lightgrey;
     margin-left: 80px;
-}
+} */
 .input_width{
     width:250px;
     height: 26px;
+    /* margin-left: 7px; */
 }
-.input_width1{
+/* .input_width1{
     width:240px;
     height: 26px;
 }
 .input_width2{
     width:105px;
     height: 26px;
-}
+} */
 #backgr_color{
     background-color:#bdbdbd;
     height: 478px;
-    margin-right: 137px;
+    margin-right: 365px;
     margin-top: -476px;
     margin-bottom: 50px;
     margin-left: 515px;
-    padding-right: 44px;
+    padding-right: 4px;
 
 }
 #button{

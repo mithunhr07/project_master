@@ -30,16 +30,23 @@ render() {
 return (
 
 <div>
-<p>Employee List</p>
+<p>Admin List</p>
+<span><h1>Admin_1</h1>
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Drivers</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Driver 1</a>
+      <a class="dropdown-item" href="#">Driver 2</a>
+     
+    </div></span>
 <table className="table" style={{ marginTop: 50 }}>
 <tr>
 <th>SIno</th>
-<th>EmpId</th>
-<th>FirstName</th>
-<th>LastName</th>
-<th>Date_of_Birth</th>
-<th>Sex</th>
-<th>JoiningDate</th>
+<th>UserName</th>
+<th>UserAddress</th>
+<th>Machinery_Name</th>
+<th>Hours</th>
+<th>Price</th>
+<th>Rent_On_Date</th>
 <th>email_id</th>
 <th>MobileNo</th>
 <th colSpan="2">Action</th>

@@ -12,13 +12,8 @@ import About_page from './Components/About_page/About_page';
 import Contact_page from './Components/Contact_page/Contact_page';
 import Calendar from './Components/Calendar/Calendar_page';
 import Payment_page from './Components/Payment_page/Payment_page';
-
-
-import Payment from './Components/CheckoutForm/Payment';
-import {Elements, StripeProvider} from 'react-stripe-elements';
 import Admintable from './Components/AdminPage/Admintable';
 import Adminform from './Components/AdminPage/Adminform';
-import Mithun from './Components/Mithun';
 import Checkoutform from './Components/CheckoutForm/CheckoutForm';
 
 

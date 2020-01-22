@@ -6,6 +6,7 @@ import pay from '../Images/payment.jpg';
 import axios from 'axios';
 
 import BrowserHistory from '../Utils/BrowserHistory';
+import Checkoutform from '../CheckoutForm/CheckoutForm';
 
 class Payment_page extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ onHandleChange=(e)=>{
     }
     onHandleClicks = (e) => {
 
-      BrowserHistory.push('/Payment'); 
+      BrowserHistory.push('/Admintable'); 
       
       }
     onHandleClick=()=>{
@@ -79,14 +80,12 @@ render() {
               <input type="text" className="input_width" name="state" placeholder="Enter your state name" onChange={this.onHandleChange}/>
               
               </div>
-             
-              </div>
           
-            
-            
-              {/* <input type="submit" id="button" value="Continue to checkout" onClick={this.onHandleClicks} class="btn" onClick={this.onHandleClick}/> */}
-              </form>
-     
+              </div>
+              <input type="submit" id="button" value="click after payment is successful" onClick={this.onHandleClicks} class="btn" />
+            </form>
+          <Checkoutform/>
+
               </div>
               </div>
 

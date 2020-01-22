@@ -49,8 +49,8 @@
 }
 #button{
     background-color: lightgrey;
-    margin-top: 20px;
-    width: 600px;
+    /* margin-top: 50px; */
+    /* width: 600px; */
     font-size: 12px;
 }
 .bill_text{

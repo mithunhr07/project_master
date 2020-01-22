@@ -11,12 +11,12 @@ constructor(props) {
 super(props);
 this.state = {
 SIno: '',
-EmpId: '',
-FirstName: '',
-LastName: '',
-Date_of_Birth: '',
-Sex: '',
-JoiningDate: '',
+UserName: '',
+UserAddress: '',
+Machinery_Name: '',
+Hours: '',
+Price: '',
+Rent_On_Date: '',
 email_id: '',
 MobileNo: ''
 
@@ -32,34 +32,34 @@ SIno: e.target.value
 })
 }
 
-onChangeEmpId = (e) => {
+onChangeUserName = (e) => {
 this.setState({
-EmpId: e.target.value
+    UserName: e.target.value
 })
 }
-onChangeFirstName = (e) => {
+onChangeUserAddress = (e) => {
 this.setState({
-FirstName: e.target.value
+    UserAddress: e.target.value
 })
 }
-onChangeLastName = (e) => {
+onChangeMachinery_Name = (e) => {
 this.setState({
-LastName: e.target.value
+    Machinery_Name: e.target.value
 })
 }
-onChangeDate_of_Birth = (e) => {
+onChangeHours = (e) => {
 this.setState({
-Date_of_Birth: e.target.value
+    Hours: e.target.value
 })
 }
-onChangeSex = (e) => {
+onChangePrice = (e) => {
 this.setState({
-Sex: e.target.value
+    Price: e.target.value
 })
 }
-onChangeJoiningDate = (e) => {
+onChangeRent_On_Date = (e) => {
 this.setState({
-JoiningDate: e.target.value
+    Rent_On_Date: e.target.value
 })
 }
 onChangeemail_id = (e) => {
@@ -78,12 +78,12 @@ debugger
 e.preventDefault();
 const payload = {
 SIno: this.state.SIno,
-EmpId: this.state.EmpId,
-FirstName: this.state.FirstName,
-LastName: this.state.LastName,
-Date_of_Birth: this.state.Date_of_Birth,
-Sex: this.state.Sex,
-JoiningDate: this.state.JoiningDate,
+UserName: this.state.UserName,
+UserAddress: this.state.UserAddress,
+Machinery_Name: this.state.Machinery_Name,
+Hours: this.state.Hours ,
+Price: this.state.Price,
+Rent_On_Date: this.state.Rent_On_Date,
 email_id: this.state.email_id,
 MobileNo: this.state.MobileNo
 };
@@ -93,12 +93,7 @@ BrowserHistory.push('./Adminform');
 }
 render() {
 return (
-<div>
-
-<div>
-{/* <Navbar /> */}
-</div>
-
+<div >
 <div>
 <form onSubmit={this.onSubmit} className="empsubmit2">
 
@@ -112,56 +107,56 @@ onChange={this.onChangeSIno}
 </div>
 
 <div>
-<label className="empnum3"> EmpId</label>
+<label className="empnum3"> UserName</label>
 <input type="text"
 className="empnum4"
-value={this.state.EmpId}
-onChange={this.onChangeEmpId}
+value={this.state.UserName}
+onChange={this.onChangeUserName}
 />
 </div>
 
 <div>
-<label className="empnum5"> FirstName</label>
+<label className="empnum5"> UserAddress</label>
 <input type="text"
 className="empnum6"
-value={this.state.FirstName}
-onChange={this.onChangeFirstName}
+value={this.state.UserAddress}
+onChange={this.onChangeUserAddress}
 />
 </div>
 
 <div>
-<label className="empnum7"> LastName</label>
+<label className="empnum7"> Machinery_Name</label>
 <input type="text"
 className="empnum8"
-value={this.state.LastName}
-onChange={this.onChangeLastName}
+value={this.state.Machinery_Name}
+onChange={this.onChangeMachinery_Name}
 />
 </div>
 
 <div>
-<label className="empnum9"> Date_of_Birth</label>
+<label className="empnum9"> Hours</label>
 <input type="text"
 className="empnum17"
-value={this.state.Date_of_Birth}
-onChange={this.onChangeDate_of_Birth}
+value={this.state.Hours}
+onChange={this.onChangeHours}
 />
 </div>
 
 <div>
-<label className="empnum10"> Sex</label>
+<label className="empnum10"> Price</label>
 <input type="text"
 className="empnum11"
-value={this.state.Sex}
-onChange={this.onChangeSex}
+value={this.state.Price}
+onChange={this.onChangePrice}
 />
 </div>
 
 <div>
-<label className="empnum12"> JoiningDate</label>
+<label className="empnum12"> Rent_On_Date</label>
 <input type="text"
 className="empnum13"
-value={this.state.JoiningDate}
-onChange={this.onChangeJoiningDate}
+value={this.state.Rent_On_Date}
+onChange={this.onChangeRent_On_Date}
 />
 </div>
 
@@ -189,24 +184,21 @@ onChange={this.onChangeMobileNo}
 </div>
 </form>
 </div>
-<div className="footer10">
-{/* <Footer /> */}
-</div>
 </div>
 )
 }
 }
 const mapStateToProps = (state) => {
 const { SIno } = state.Admin_reducer
-const { EmpId } = state.Admin_reducer
-const { FirstName } = state.Admin_reducer
-const { LastName } = state.Admin_reducer
-const { Date_of_Birth } = state.Admin_reducer
-const { Sex } = state.Admin_reducer
-const { JoiningDate } = state.Admin_reducer
+const { UserName } = state.Admin_reducer
+const { UserAddress } = state.Admin_reducer
+const { Machinery_Name } = state.Admin_reducer
+const { Hours } = state.Admin_reducer
+const { Price } = state.Admin_reducer
+const { Rent_On_Date } = state.Admin_reducer
 const { email_id } = state.Admin_reducer
 const { MobileNo } = state.Admin_reducer
 
-return { SIno, EmpId, FirstName, LastName, Date_of_Birth, Sex, JoiningDate, email_id, MobileNo }
+return { SIno, UserName, UserAddress, Machinery_Name, Hours, Price, Rent_On_Date, email_id, MobileNo }
 }
 export default connect(mapStateToProps, { questionHandle })(Admintable);

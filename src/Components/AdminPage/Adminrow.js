@@ -28,27 +28,27 @@ return (
 </td>
 
 <td className="tab3">
-{this.props.obj.EmpId}
+{this.props.obj.UserName}
 </td>
 
 <td className="tab4">
-{this.props.obj.FirstName}
+{this.props.obj.UserAddress}
 </td>
 
 <td className="tab5">
-{this.props.obj.LastName}
+{this.props.obj.Machinery_Name}
 </td>
 
 <td className="tab6">
-{this.props.obj.Date_of_Birth}
+{this.props.obj.Hours}
 </td>
 
 <td className="tab7">
-{this.props.obj.Sex}
+{this.props.obj.Price}
 </td>
 
 <td className="tab8">
-{this.props.obj.JoiningDate}
+{this.props.obj.Rent_On_Date}
 </td>
 
 <td className="tab9">
@@ -59,9 +59,9 @@ return (
 {this.props.obj.MobileNo}
 </td>
 
-<td>
+{/* <td>
 <button onClick={this.edit} className="btn btn-primary">Edit</button>
-</td>
+</td> */}
 
 <td className="tab11">
 <button className="btn btn-danger" onClick={this.delete.bind(this.id)}>Delete</button>

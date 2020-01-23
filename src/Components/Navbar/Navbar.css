@@ -10,6 +10,7 @@
 }
 #services{
     margin-left: 40px;
+    color: white;
 }
 .text-color{
     color: white;
@@ -48,3 +49,6 @@
     display: block;
     z-index: 1;}
   
+#link{
+    color: white;
+}

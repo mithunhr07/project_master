@@ -161,7 +161,7 @@ return (
 <div> <label ><b>Mobilenumber</b></label><br /></div>
 <div> <input type="text" name="Mobnum" className="one" onChange={this.onHandleChange} /><br /><br /></div>
 </div>
-<a href="" onClick={this.onHandleClicks}>you have already account</a>
+<a href="LoginPage" onClick={this.onHandleClicks}>you have already account</a>
 <p id="errclr" >{this.state.phnerr}</p>
 <button onClick={this.onHandleClick} className="btn1"><b>Register</b></button>
 <a href="" onClick={this.onHandleClicksCancel} className="canbtn">Cancel</a>

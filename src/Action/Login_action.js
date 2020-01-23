@@ -13,9 +13,9 @@ return function(dispatch)
 {
 axios(options)
 .then(response => {
-console.log(response.status);
+console.log(response);
 sessionStorage.setItem('authentication', response.data.token)
-BrowserHistory.push('/HomePage')
+BrowserHistory.push('/Calender')
 });
 dispatch({type:'LOGIN',payload:payload});
 }

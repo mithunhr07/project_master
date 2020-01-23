@@ -49,18 +49,20 @@ class LoginPage extends Component {
 
 
   onHandleClick = (e) => {
-    debugger;
+    // debugger;
+    // BrowserHistory.push('/Calendar')
     e.preventDefault();
     const payload = {
       username: this.state.username,
       // Lastname: this.state.Lastname,
       // email: this.state.email,
       password: this.state.password,
+      
       // Confirmpassword: this.state.Confirmpassword,
       // Mobnum: this.state.Mobnum
 
     }
-    console.log(payload)
+    // console.log(payload)
     // BrowserHistory.push('/login')
     // signup(reqst).then(res => {
     // if (res.data === "User Created Succesfully") {
@@ -115,7 +117,9 @@ class LoginPage extends Component {
         data: payload
       }).then(async (res) => {
         console.log(res);
-        BrowserHistory.push('/HomePage')
+        sessionStorage.setItem('authentication', res.data.token)
+
+        BrowserHistory.push('/Calendar')
       })
 
     // }
@@ -141,7 +145,6 @@ class LoginPage extends Component {
                   <div> <input type="password" name="password" onChange={this.onHandleChange} /><br /><br /></div>
                   <div> <p className="error_color">{this.state.perr}</p></div>
                 </div>
-                <a href="/" onClick={this.onHandleClicks}>you have already account</a><br></br>
                 <button onClick={this.onHandleClick} className="btn_width"><b>Login</b></button>
                 <button onClick={this.onHandleClicks} className="btn_align"><b>Register</b></button><br></br>
                 <a href="/" onClick={this.onHandleClicksCancel} id="cancel_btn">Cancel</a>

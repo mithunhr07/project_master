@@ -7,6 +7,8 @@ import axios from 'axios';
 
 import BrowserHistory from '../Utils/BrowserHistory';
 import Checkoutform from '../CheckoutForm/CheckoutForm';
+import Calendar_page from '../Calendar/Calendar_page';
+import Admintable from '../AdminPage/Admintable';
 
 class Payment_page extends Component {
   constructor(props) {
@@ -17,12 +19,6 @@ class Payment_page extends Component {
       address:'',
       city:'',
       state:'',
-      zip:'',
-      cardname:'',
-      cardnumber:'',
-      expmonth:'',
-      expyear:'',
-      cvv:'',
     };
 }
 onHandleChange=(e)=>{
@@ -64,26 +60,10 @@ render() {
               <div class="col"  id="backgr_color">
               <div id="container_width">
               <form>
-              <div class="row">
-              <div class="col card_container1">
-              <h3 className="billing_align">Billing Address</h3>
-              <label><i class="fa fa-user"></i> Full Name</label>
-              <input type="text" className="input_width" name="firstname" placeholder="Enter your full name" onChange={this.onHandleChange}/><br></br><br></br>
-              <label><i class="fa fa-envelope"></i> Email</label>
-              <input type="text" className="input_width" name="email" placeholder="mithunhrm07@gmail.com" onChange={this.onHandleChange}/><br></br><br></br>
-              <label><i class="fa fa-address-card-o"></i> Address</label>
-              <input type="text" className="input_width" name="address" placeholder="Enter your address" onChange={this.onHandleChange}/><br></br><br></br>
-              <label><i class="fa fa-institution"></i> City</label>
-              <input type="text" className="input_width" name="city" placeholder="Enter your city name" onChange={this.onHandleChange}/><br></br><br></br>
-              
-              <label>State</label>
-              <input type="text" className="input_width" name="state" placeholder="Enter your state name" onChange={this.onHandleChange}/>
-              
-              </div>
-          
-              </div>
-              <input type="submit" id="button" value="click after payment is successful" onClick={this.onHandleClicks} class="btn" />
+            <Admintable/>
+             
             </form>
+            {/* <Calendar_page/> */}
           <Checkoutform/>
 
               </div>

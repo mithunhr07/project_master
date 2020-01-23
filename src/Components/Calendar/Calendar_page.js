@@ -11,7 +11,7 @@ import '@progress/kendo-react-popup'
 import '@progress/kendo-date-math'
 import '@progress/kendo-react-dropdowns'
 
-class Calender extends React.Component {
+class Calendar_page extends React.Component {
     onHandleClicks = (e) => {
 
         BrowserHistory.push('/Payment_page'); 
@@ -27,4 +27,4 @@ class Calender extends React.Component {
     }
 }
 
-export default Calender;
+export default Calendar_page;

@@ -7,7 +7,7 @@ import logo from '../Images/logo_image.jpeg'
 class Navbar extends Component {
   logout=()=>{
     sessionStorage.removeItem('authentication')
-    BrowserHistory.push('/')
+    BrowserHistory.push('/LoginPage')
   }
     render() {
         return (
@@ -26,7 +26,7 @@ class Navbar extends Component {
  
   <ul class="navbar-nav" id="nav">
     <li class="nav-item">
-      <a class="nav-link" href="HomePage">Home</a>
+      <a class="nav-link" id="link" href="HomePage">Home</a>
     </li>
     <div class="dropdown">
     <li class="nav-item">
@@ -41,14 +41,14 @@ class Navbar extends Component {
 
     </li>
     </div>
-    <li class="nav-item" id="services">
-      <a class="nav-link" href="About_page">About</a>
+    <li class="nav-item">
+      <a class="nav-link" id="services" href="About_page">About</a>
     </li>
-    <li class="nav-item" id="services">
-      <a class="nav-link" href="Contact_page">Contact Us</a>
+    <li class="nav-item">
+      <a class="nav-link" id="services" href="Contact_page">Contact Us</a>
     </li>
-    <li class="nav-item"  id="services">
-      <a class="nav-link"  onClick={this.logout}>Logout</a>
+    <li class="nav-item">
+      <a class="nav-link" id="services" onClick={this.logout}>Logout</a>
     </li>
     
   </ul>

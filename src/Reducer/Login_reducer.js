@@ -8,7 +8,7 @@ const initialState={
     }
     
     export default(state = initialState,action)=>{
-    debugger
+    // debugger
     switch(action.type){
     
     case "LOGIN":{

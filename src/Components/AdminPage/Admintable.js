@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import Navbar from '../Navbar/Navbar';
 import BrowserHistory from "../Utils/BrowserHistory";
 import { questionHandle } from '../../Action/Admin_action';
-import './Admintable.css';
+// import './Admintable.css';
 import { connect } from 'react-redux'
 
 class Admintable extends Component {
@@ -95,7 +95,7 @@ render() {
 return (
 <div >
 <div>
-<form onSubmit={this.onSubmit} className="empsubmit2">
+<form onSubmit={this.onSubmit}>
 
 <div>
 <label className="empnum1">SIno </label>

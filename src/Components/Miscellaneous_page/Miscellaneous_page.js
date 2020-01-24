@@ -25,7 +25,8 @@ Power bulge and torque reserve pull through the tough spots
 32F/16R PowrReverser™ transmission for ultimate speed control
 Heavy-duty 3-point hitch lift capacity for implement versatility
 Mid-frame design for support and strength.click below to book now</p>
-  <a href="LoginPage" class="btn btn-primary">Book Now</a>
+  <a href="LoginPage" class="btn btn-success">Book Now</a>
+  <button class="btn btn-danger">1500/hr</button>
 </div>
 </div>
 </div>
@@ -42,7 +43,8 @@ Automatic reset “cut-out” clutch with overrunning clutch to protect auger dr
 Auger positioned for operator visibility.7000 lb. drop-leg tongue jack with separate storage positions provides tighter turning radius.
 Hand wheel operated clean-out door at bottom.
  </p>
-  <a href="LoginPage" class="btn btn-primary">Book Now</a>
+  <a href="LoginPage" class="btn btn-success">Book Now</a>
+  <button class="btn btn-danger">1500/hr</button>
 </div>
 </div>
 </div>
@@ -59,7 +61,8 @@ Powerful Yanmar® diesel engine delivers plenty of power under heavy loads
 Maximize productivity with an eHydro™ transmission
 PowrReverser™ transmission allows for clutchless direction changes
 Operator station is comfortable and convenient</p>
-  <a href="LoginPage" class="btn btn-primary">Book Now</a>
+  <a href="LoginPage" class="btn btn-success">Book Now</a>
+  <button class="btn btn-danger">1500/hr</button>
 </div>
 </div>
 </div>
@@ -77,7 +80,8 @@ Optional chrome flighting for improved wear resistance.
 Auger positioned for operator visibility.
 Auger folds within the width of the box for compact transporting and storage.
  </p>
-  <a href="LoginPage" class="btn btn-primary">Book Now</a>
+  <a href="LoginPage" class="btn btn-success">Book Now</a>
+  <button class="btn btn-danger">1500/hr</button>
 </div>
 </div>
 </div>

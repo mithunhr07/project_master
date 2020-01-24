@@ -1,10 +1,29 @@
-.frm{
-  background-color: lightgrey;
-  margin-bottom: 100px;
+.register
+{
+    background-color: gainsboro;
+    
+    padding-top: 30px;
+
 }
-#errclr{
-  color: red;
+.frm
+{
+    padding-left: 10px;
 }
-.canbtn{
-  margin-left: 20px;
+.btn1
+{
+    height: 35px;
+    background-color: blue;
+    color: white;
 }
+a
+{
+    margin-left: 15px;
+}
+.one
+{
+    width: 75%;
+
+}
+/* p{
+    color: red;
+} */

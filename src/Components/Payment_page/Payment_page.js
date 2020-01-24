@@ -9,6 +9,13 @@ import BrowserHistory from '../Utils/BrowserHistory';
 import Checkoutform from '../CheckoutForm/CheckoutForm';
 import Calendar_page from '../Calendar/Calendar_page';
 import Admintable from '../AdminPage/Admintable';
+import { Calendar, CalendarCell, CalendarWeekCell, CalendarNavigationItem, CalendarHeaderTitle, DateInput, DatePicker, TimePicker, MultiViewCalendar, DateRangePicker, DateTimePicker } from '@progress/kendo-react-dateinputs'
+import '@progress/kendo-react-intl'
+import '@progress/kendo-react-tooltip'
+import '@progress/kendo-react-common'
+import '@progress/kendo-react-popup'
+import '@progress/kendo-date-math'
+import '@progress/kendo-react-dropdowns'
 
 class Payment_page extends Component {
   constructor(props) {
@@ -19,33 +26,40 @@ class Payment_page extends Component {
       address:'',
       city:'',
       state:'',
+      showMe:false
     };
+}
+Operation()
+{
+this.setState({
+showMe:!this.state.showMe
+})
 }
 onHandleChange=(e)=>{
         this.setState({[e.target.name]:e.target.value});
     }
-    onHandleClicks = (e) => {
+    // onHandleClicks = (e) => {
 
-      BrowserHistory.push('/Admintable'); 
+    //   BrowserHistory.push('/Admintable'); 
       
-      }
-    onHandleClick=()=>{
-      debugger;
-      const payload={Fullname:this.state.firstname,email:this.state.email,Address:this.state.address,
-        City:this.state.city,State:this.state.state,Zip:this.state.zip, Name_on_card:this.state.cardname,
-        Credit_Number:this.state.cardnumber,Exp_month:this.state.expmonth,Exp_year:this.state.expyear,CVV:this.state.cvv}
-      console.log(payload)
-      const options = {
-          url: 'http://localhost:8008/Billing',
-          method: 'POST',
-          data: payload
-          };
-          axios(options)
-          .then(response => {
-          console.log(response.status);
+    //   }
+  //   onHandleClick=()=>{
+  //     debugger;
+  //     const payload={Fullname:this.state.firstname,email:this.state.email,Address:this.state.address,
+  //       City:this.state.city,State:this.state.state,Zip:this.state.zip, Name_on_card:this.state.cardname,
+  //       Credit_Number:this.state.cardnumber,Exp_month:this.state.expmonth,Exp_year:this.state.expyear,CVV:this.state.cvv}
+  //     console.log(payload)
+  //     const options = {
+  //         url: 'http://localhost:8008/Billing',
+  //         method: 'POST',
+  //         data: payload
+  //         };
+  //         axios(options)
+  //         .then(response => {
+  //         console.log(response.status);
         
-        });
-  }
+  //       });
+  // }
 
 render() {
     return (
@@ -57,17 +71,20 @@ render() {
             <div class="col">
             <img src={pay} className="payment_img"></img>
           </div>
-              <div class="col"  id="backgr_color">
-              <div id="container_width">
-              <form>
-            <Admintable/>
-             
-            </form>
-            {/* <Calendar_page/> */}
-          <Checkoutform/>
-
-              </div>
-              </div>
+          
+          <div class="col">
+          <div className="example-wrapper" id="calendar">
+               <DateTimePicker />
+               <button onClick={this.onHandleClicks} className="btn_align" onClick={()=>this.Operation()}><b>Next</b></button>
+            </div>
+          </div>
+             {this.state.showMe?
+                <div class="col"  id="backgr_color" className="container_width">
+                  <Admintable/>
+                  <Checkoutform/>
+                </div>
+                :null}
+          
 
               </div>
               <FooterPage/>

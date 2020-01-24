@@ -3,8 +3,9 @@
     width: 335px;
     margin-left: 70px;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
-#container_width{
+.container_width{
     width: 270px;
     margin-left: 30px;
     margin-top: 30px;
@@ -39,12 +40,13 @@
 } */
 #backgr_color{
     background-color:#bdbdbd;
-    height: 478px;
+    height: 427px;
     margin-right: 365px;
-    margin-top: -476px;
+    margin-top: -530px;
     margin-bottom: 50px;
     margin-left: 515px;
     padding-right: 4px;
+    margin-left: 804px;
 
 }
 #button{

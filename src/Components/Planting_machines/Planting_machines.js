@@ -6,8 +6,30 @@ import planter2 from '../Images/planter2.jpg';
 import planter3 from '../Images/planter3.jpg';
 import Navbar from '../Navbar/Navbar';
 import FooterPage from '../Footer/Footer';
+import axios from 'axios';
 
 class Planting_machines extends Component {
+  onHandleClick = (e) => {
+    const payload = {
+      Machine_Name: "planting",
+      Price: "1500",
+    
+    }
+    const options = {
+      url: 'http://localhost:8008/Services',
+      method: 'POST',
+      data: payload
+      };
+       
+      axios(options)
+      .then(response => {
+      console.log(response.status);
+      // BrowserHistory.push('./login')
+      window.alert("booked successfully")
+      });
+      
+
+  }
     render() {
         return (
             <div>
@@ -22,7 +44,8 @@ class Planting_machines extends Component {
       <h4 class="card-title">Potato Planter</h4>
       <p class="card-text">It is mounted on 3 points linkage system,takes the motion from its own wheel.
        you can work on the light soil and heavy soil at 5km/h.</p>
-      <a href="LoginPage" class="btn btn-primary">Book Now</a>
+      <a href="LoginPage" class="btn btn-danger">Book Now</a>
+      <button class="btn btn-info" onClick={this.onHandleClick}>1500/hr</button>
     </div>
   </div>
   </div>
@@ -36,7 +59,8 @@ class Planting_machines extends Component {
       <h4 class="card-title">AgriMec Planter</h4>
       <p class="card-text">It is an Universal Type can be used for cotton, corn,
         soy bean, etc.It is maintenance free machine and it is lower model of pneumatic seed drill.</p>
-      <a href="LoginPage" class="btn btn-primary">Book Now</a>
+      <a href="LoginPage" class="btn btn-success">Book Now</a>
+      <button class="btn btn-danger">1400/hr</button>
     </div>
   </div>
   </div>
@@ -51,7 +75,8 @@ class Planting_machines extends Component {
       <p class="card-text">Agrional Trailed Mechanical Seed Drill, pulled by tractor and
          similar seeds together with fertilizer and depth continuously,thus how it works with supported machine. Click below to book now.
      </p>
-      <a href="LoginPage" class="btn btn-primary">Book Now</a>
+      <a href="LoginPage" class="btn btn-success">Book Now</a>
+      <button class="btn btn-danger">1200/hr</button>
     </div>
   </div>
   </div>
@@ -66,7 +91,8 @@ class Planting_machines extends Component {
       <p class="card-text">Agrional Mounted Precision Pneumatic Planter can precisely sow every kind of seeds
        in any sowing space and at any row space.
      </p>
-      <a href="LoginPage" class="btn btn-primary">Book Now</a>
+      <a href="LoginPage" class="btn btn-success">Book Now</a>
+     <button class="btn btn-danger">1500/hr</button>
     </div>
   </div>
   </div>

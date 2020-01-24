@@ -32,12 +32,11 @@ return (
 <div>
 <p>Admin List</p>
 <span><h1>Admin_1</h1>
-<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Drivers</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Driver 1</a>
-      <a class="dropdown-item" href="#">Driver 2</a>
-     
-    </div></span>
+  <select name="cars">
+    <option>Driver1</option>
+    <option>Driver2</option>
+  </select>
+  </span>
 <table className="table" style={{ marginTop: 50 }}>
 <tr>
 <th>SIno</th>

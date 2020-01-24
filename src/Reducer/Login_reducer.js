@@ -1,27 +1,25 @@
 const initialState={
-    // Firstname:'',
-    // Lastname:'',
-    // email:'',
+    email:'',
     password:'',
-    // Confirmpassword:'',
-    username:''
+    LoginDetails:{}
     }
     
     export default(state = initialState,action)=>{
-    // debugger
     switch(action.type){
-    
     case "LOGIN":{
     return{...state,
-    // Lastname:action.payload.Lastname,
-    // email:action.payload.email,
-    password:action.payload.password,
-    // Confirmpassword:action.payload.Confirmpassword,
-    username:action.payload.username
+    email:action.payload.email,
+    password:action.payload.password
+    
+    }
+    }
+    
+    case "LOGINDETAILS":{
+    return{...state,
+    LoginDetails: action.payload.LoginDetails
     }
     }
     default:
     return state;
     }
-    
     }

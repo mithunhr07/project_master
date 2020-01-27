@@ -40,13 +40,11 @@
 } */
 #backgr_color{
     background-color:#bdbdbd;
-    height: 427px;
-    margin-right: 365px;
     margin-top: -530px;
-    margin-bottom: 50px;
-    margin-left: 515px;
-    padding-right: 4px;
-    margin-left: 804px;
+    margin-left: 700px;
+    height: 475px;
+    margin-right: 270px;
+  
 
 }
 #button{

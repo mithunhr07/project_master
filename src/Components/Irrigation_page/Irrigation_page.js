@@ -4,11 +4,83 @@ import irrigation from '../Images/irrigation.jpeg';
 import irrigation1 from '../Images/irrigation1.jpeg';
 import irrigation2 from '../Images/irrigation2.jpeg';
 import irrigation3 from '../Images/irrigation3.jpeg';
-
+import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import FooterPage from '../Footer/Footer';
 
 class Irrigation_page extends Component {
+  onHandleClick4 = (e) => {
+    const payload = {
+      Machine_Name: "Sprayer nozzles",
+      Price: "1500"
+    }
+    const options = {
+      url: 'http://localhost:8008/Services',
+      method: 'POST',
+      data: payload
+      };
+       
+      axios(options)
+      .then(response => {
+      console.log(response.status);
+      // BrowserHistory.push('./login')
+      window.alert("booked successfully")
+      });
+      }
+      onHandleClick5 = (e) => {
+        const payload = {
+          Machine_Name: "Sprinkler",
+          Price: "1300"
+        }
+        const options = {
+          url: 'http://localhost:8008/Services',
+          method: 'POST',
+          data: payload
+          };
+           
+          axios(options)
+          .then(response => {
+          console.log(response.status);
+          // BrowserHistory.push('./login')
+          window.alert("booked successfully")
+          });
+          }
+          onHandleClick6 = (e) => {
+            const payload = {
+              Machine_Name: "misting",
+              Price: "1500"
+            }
+            const options = {
+              url: 'http://localhost:8008/Services',
+              method: 'POST',
+              data: payload
+              };
+               
+              axios(options)
+              .then(response => {
+              console.log(response.status);
+              // BrowserHistory.push('./login')
+              window.alert("booked successfully")
+              });
+              }
+              onHandleClick7 = (e) => {
+                const payload = {
+                  Machine_Name: "Irrigation kit",
+                  Price: "1800"
+                }
+                const options = {
+                  url: 'http://localhost:8008/Services',
+                  method: 'POST',
+                  data: payload
+                  };
+                   
+                  axios(options)
+                  .then(response => {
+                  console.log(response.status);
+                  // BrowserHistory.push('./login')
+                  window.alert("booked successfully")
+                  });
+                  }
     render() {
         return (
             <div>
@@ -23,8 +95,8 @@ class Irrigation_page extends Component {
       <h4 class="card-title">Sprayer nozzles</h4>
       <p class="card-text">fixed spray nozzles come in circular spray patterns,
        but recently there are some rectangular patterns on the market as well.</p>
-      <a href="LoginPage" class="btn btn-success">Book Now</a>
-      <button class="btn btn-danger">1500/hr</button>
+      <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick4}>Book Now</a>
+      <button class="btn btn-info" id="hour1">1500/hr</button>
     </div>
   </div>
   </div>
@@ -39,8 +111,8 @@ class Irrigation_page extends Component {
       <p class="card-text">used to irrigate agricultural crops, lawns and other areas.
        They are also used for cooling. Irrigation sprinklers can be used for the residential, industrial and agricultural usage.
         It is useful on uneven land where sufficient water is not available </p>
-      <a href="LoginPage" class="btn btn-success">Book Now</a>
-      <button class="btn btn-danger">1500/hr</button>
+      <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick5}>Book Now</a>
+      <button class="btn btn-info" id="hour1">1300/hr</button>
     </div>
   </div>
   </div>
@@ -56,8 +128,8 @@ class Irrigation_page extends Component {
       your plants from the recent sizzling heat wave and that would have been an overhead misting system.
       The plant absorb small amount of water, thus how it helps to save water in agriculture
      </p>
-      <a href="LoginPage" class="btn btn-success">Book Now</a>
-      <button class="btn btn-danger">1500/hr</button>
+      <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick6}>Book Now</a>
+      <button class="btn btn-info" id="hour1">1500/hr</button>
     </div>
   </div>
   </div>
@@ -72,8 +144,8 @@ class Irrigation_page extends Component {
       <p class="card-text">It is a highly efficient form of watering system with
        less water consumption and even distribution of available water thereby ensuring the highest crop output, thus how it helps to supply water through pipe.
      </p>
-      <a href="LoginPage" class="btn btn-success">Book Now</a>
-      <button class="btn btn-danger">1500/hr</button>
+      <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick7}>Book Now</a>
+      <button class="btn btn-info" id="hour1">1800/hr</button>
     </div>
   </div>
   </div>

@@ -1,18 +1,44 @@
-#signup_container{
-    background-color: lightgrey;
-    margin-bottom: 130px;
-    margin-top: 50px;
-}
 .error_color{
     color: red;
 }
-.btn_align{
-    margin-left: 20px;
-    width: 65px;
+.loginpagewidth{
+background:url('../Images/secure.jpg');
+height: 658px;
+
 }
-.btn_width{
-    width: 75px;
+.inputwidth{
+    width: 200px;
 }
-#cancel_btn{
-    margin-left: 65px;
+.Signtext{
+    font-size: 30px;
+    color:lightblue;
+    margin-top: 130px;
+  
+}
+.etext{
+    font-size: 16px;
+    color:lightblue;
+}
+
+.etext1{
+    font-size: 10px;
+    color:lightblue;
+    width: 150px;
+}
+.btn1align{
+    height: 20px;
+    background-color:lightblue;
+}
+.cancelbtn{
+    margin-left:8px;
+}
+.frgtpassw{
+    margin-left: 530px;
+    /* margin-top: 200px; */
+}
+.forgetbackground{
+    background:url('../Images/forget.jpg') no-repeat;
+    height: 500px;
+    width: 1200px;
+    
 }

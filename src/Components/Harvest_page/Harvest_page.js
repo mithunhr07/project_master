@@ -4,10 +4,83 @@ import harvest from '../Images/harvest.jpeg';
 import harvest1 from '../Images/harvest1.jpeg';
 import harvest2 from '../Images/harvest2.jpeg';
 import harvest3 from '../Images/harvest3.jpeg';
+import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import FooterPage from '../Footer/Footer';
 
 class Harvest_page extends Component {
+  onHandleClick8 = (e) => {
+    const payload = {
+      Machine_Name: "Raggi-Cut",
+      Price: "1500"
+    }
+    const options = {
+      url: 'http://localhost:8008/Services',
+      method: 'POST',
+      data: payload
+      };
+       
+      axios(options)
+      .then(response => {
+      console.log(response.status);
+      // BrowserHistory.push('./login')
+      window.alert("booked successfully")
+      });
+      }
+      onHandleClick9 = (e) => {
+        const payload = {
+          Machine_Name: "S Paddy cut-mac",
+          Price: "1500"
+        }
+        const options = {
+          url: 'http://localhost:8008/Services',
+          method: 'POST',
+          data: payload
+          };
+           
+          axios(options)
+          .then(response => {
+          console.log(response.status);
+          // BrowserHistory.push('./login')
+          window.alert("booked successfully")
+          });
+          }
+          onHandleClick0 = (e) => {
+            const payload = {
+              Machine_Name: "Corn-cut mac",
+              Price: "1500"
+            }
+            const options = {
+              url: 'http://localhost:8008/Services',
+              method: 'POST',
+              data: payload
+              };
+               
+              axios(options)
+              .then(response => {
+              console.log(response.status);
+              // BrowserHistory.push('./login')
+              window.alert("booked successfully")
+              });
+              }
+              onHandleClick01 = (e) => {
+                const payload = {
+                  Machine_Name: "L Paddy cut-mac",
+                  Price: "1500"
+                }
+                const options = {
+                  url: 'http://localhost:8008/Services',
+                  method: 'POST',
+                  data: payload
+                  };
+                   
+                  axios(options)
+                  .then(response => {
+                  console.log(response.status);
+                  // BrowserHistory.push('./login')
+                  window.alert("booked successfully")
+                  });
+                  }
     render() {
         return (
             <div>
@@ -22,8 +95,8 @@ class Harvest_page extends Component {
   <h4 class="card-title">Raggi-Cut</h4>
   <p class="card-text">The Greaves power reaper is a high performing farm equipment. It is powered by the powerful Greaves
    Engine. It is suitable for the harvesting of Ragi. It gives very high speed cutting productivity with minimum lossage.Click below button to book now.</p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick8}>Book Now</a>
+  <button class="btn btn-info" id="hour2">1500/hr</button>
 </div>
 </div>
 </div>
@@ -38,8 +111,8 @@ class Harvest_page extends Component {
   <p class="card-text">The combine harvester consists of cutting unit, threshing unit and cleaning and grain handling units.
    The cutting section includes reel,an auger and a feeder conveyer.paddy harvest through Super-SMS(Super straw management system)
     equipment attached to Combine Harvester.</p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick9}>Book Now</a>
+  <button class="btn btn-info" id="hour2">1500/hr</button>
 </div>
 </div>
 </div>
@@ -54,8 +127,8 @@ class Harvest_page extends Component {
   <p class="card-text">The combine harvester consists of a cutting unit, threshing unit and cleaning and grain handling units.
    The cutting section is specially designed to harvest maize crop and the header can be fitted to conventional grain combines.
  </p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick0}>Book Now</a>
+  <button class="btn btn-info" id="hour2">1500/hr</button>
 </div>
 </div>
 </div>
@@ -70,8 +143,8 @@ class Harvest_page extends Component {
   <p class="card-text">The combine harvester consists of cutting unit, threshing unit and cleaning and grain handling units.
    The cutting section includes reel, cutter bar, an auger and a feeder conveyer. Threshing section has threshing cylinder, concave. 
  </p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick01}>Book Now</a>
+  <button class="btn btn-info" id="hour2">1500/hr</button>
 </div>
 </div>
 </div>

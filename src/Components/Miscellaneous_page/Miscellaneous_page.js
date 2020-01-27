@@ -4,10 +4,83 @@ import miscellaneous from '../Images/miscellaneous.jpg';
 import miscellaneous1 from '../Images/miscellaneous1.jpg';
 import miscellaneous2 from '../Images/miscellaneous2.png';
 import miscellaneous3 from '../Images/miscellaneous3.png';
+import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import FooterPage from '../Footer/Footer';
 
 class Miscellaneous_page extends Component {
+  onHandleClicks4 = (e) => {
+    const payload = {
+      Machine_Name: "Utility Tractor",
+      Price: "1500"
+    }
+    const options = {
+      url: 'http://localhost:8008/Services',
+      method: 'POST',
+      data: payload
+      };
+       
+      axios(options)
+      .then(response => {
+      console.log(response.status);
+      // BrowserHistory.push('./login')
+      window.alert("booked successfully")
+      });
+      }
+      onHandleClicks5 = (e) => {
+        const payload = {
+          Machine_Name: "Grain Cart",
+          Price: "1500"
+        }
+        const options = {
+          url: 'http://localhost:8008/Services',
+          method: 'POST',
+          data: payload
+          };
+           
+          axios(options)
+          .then(response => {
+          console.log(response.status);
+          // BrowserHistory.push('./login')
+          window.alert("booked successfully")
+          });
+          }
+          onHandleClicks6 = (e) => {
+            const payload = {
+              Machine_Name: "Compact Tractor",
+              Price: "1500"
+            }
+            const options = {
+              url: 'http://localhost:8008/Services',
+              method: 'POST',
+              data: payload
+              };
+               
+              axios(options)
+              .then(response => {
+              console.log(response.status);
+              // BrowserHistory.push('./login')
+              window.alert("booked successfully")
+              });
+              }
+              onHandleClicks7 = (e) => {
+                const payload = {
+                  Machine_Name: "Grain Cart 850 Model",
+                  Price: "1500"
+                }
+                const options = {
+                  url: 'http://localhost:8008/Services',
+                  method: 'POST',
+                  data: payload
+                  };
+                   
+                  axios(options)
+                  .then(response => {
+                  console.log(response.status);
+                  // BrowserHistory.push('./login')
+                  window.alert("booked successfully")
+                  });
+                  }
     render() {
         return (
             <div>
@@ -25,8 +98,8 @@ Power bulge and torque reserve pull through the tough spots
 32F/16R PowrReverser™ transmission for ultimate speed control
 Heavy-duty 3-point hitch lift capacity for implement versatility
 Mid-frame design for support and strength.click below to book now</p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger"onClick={this.onHandleClick4}>Book Now</a>
+  <button class="btn btn-info" id="hour4">1500/hr</button>
 </div>
 </div>
 </div>
@@ -43,8 +116,8 @@ Automatic reset “cut-out” clutch with overrunning clutch to protect auger dr
 Auger positioned for operator visibility.7000 lb. drop-leg tongue jack with separate storage positions provides tighter turning radius.
 Hand wheel operated clean-out door at bottom.
  </p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick5}>Book Now</a>
+  <button class="btn btn-info"  id="hour4">1500/hr</button>
 </div>
 </div>
 </div>
@@ -61,8 +134,8 @@ Powerful Yanmar® diesel engine delivers plenty of power under heavy loads
 Maximize productivity with an eHydro™ transmission
 PowrReverser™ transmission allows for clutchless direction changes
 Operator station is comfortable and convenient</p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick6}>Book Now</a>
+  <button class="btn btn-info"  id="hour4">1500/hr</button>
 </div>
 </div>
 </div>
@@ -80,8 +153,8 @@ Optional chrome flighting for improved wear resistance.
 Auger positioned for operator visibility.
 Auger folds within the width of the box for compact transporting and storage.
  </p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick7}>Book Now</a>
+  <button class="btn btn-info"  id="hour4">1500/hr</button>
 </div>
 </div>
 </div>

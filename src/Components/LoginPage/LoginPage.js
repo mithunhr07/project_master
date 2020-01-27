@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BrowserHistory from '../Utils/BrowserHistory'
 import {loginHandle} from '../../Action/Login_action';
+import './LoginPage.css'
 class LoginPage extends Component {
 constructor(props) {
 super(props);
@@ -80,7 +81,7 @@ this.setState({ perr: "Please enter the valid password" })
 // this.Loginaction.props.success("Register Successfully")
 // }
 this.props.loginHandle(payload);
-// BrowserHistory.push('/login')
+// BrowserHistory.push('/Payment_page')
 // const url = "http://localhost:4013/Signup"
 // return axios({
 // method: 'POST',
@@ -92,32 +93,35 @@ this.props.loginHandle(payload);
 // })
 
 }
-
+confirmmail=(e)=>{
+    sessionStorage.setItem('change',this.state.email)
+    BrowserHistory.push('/forget');
+    }
 
 render() {
 return (
-<div className="register">
-<div class="container">
+<div className="loginpagewidth">
+<div>
 <div class="row">
 <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2"></div>
-<div class="col-sm-6 col-lg-6 col-md-6 col-xs-6 frm">
-<h1>Signin</h1>
+<div class="col-sm-6 col-lg-6 col-md-6 col-xs-6">
+<h1 className="Signtext">Signin</h1>
 <div className="regcont">
 
 
-<div><label ><b>Email</b></label><br /></div>
-<div> <input type="text" name="email" className="one" onChange={this.onHandleChange} /><br /></div>
-<div> <p >{this.state.uerr}</p></div>
-<div><label ><b>Password</b></label><br /></div>
-<div> <input type="password" name="password" className="one" onChange={this.onHandleChange} /><br /><br /></div>
-<div> <p >{this.state.perr}</p></div>
+<div><label className="etext"><b>Email</b></label><br /></div>
+<div><input type="text" name="email" className="inputwidth" onChange={this.onHandleChange} /><br /></div>
+<div> <p className="error_color">{this.state.uerr}</p></div>
+<div><label className="etext"><b>Password</b></label><br /></div>
+<div> <input type="password" name="password" className="inputwidth" onChange={this.onHandleChange} /><br /><br /></div>
+<div> <p className="error_color">{this.state.perr}</p></div>
 
 </div>
-
-<button onClick={this.onHandleClick} className="btn1"><b>Signin</b></button>
-<p>If not registered, Register know</p>
-<button onClick={this.onHandleClicks} className="btn1"><b>Register</b></button>
-<a href="" onClick={this.onHandleClicksCancel}>Cancel</a>
+<a onClick={this.confirmmail} className="forgetpassword">Forget Password</a>
+<button onClick={this.onHandleClick} className="btn1align"><b>Signin</b></button>
+<p className="etext1">If not registered, Register know</p>
+<button onClick={this.onHandleClicks} className="btn1align"><b>Register</b></button>
+<a href="" onClick={this.onHandleClicksCancel} className="cancelbtn">Cancel</a>
 </div>
 <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
 </div>

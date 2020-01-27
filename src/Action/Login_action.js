@@ -22,7 +22,7 @@ alert("Incorrect password")
 else {
 const LoginDet = JSON.stringify({'token':response.data.token, 'userId': response.data.userId});
 sessionStorage.setItem('LOGINDETAILS', LoginDet);
-BrowserHistory.push('./Calendar')
+BrowserHistory.push('/Payment_page')
 }
 })
 .catch(error=>{

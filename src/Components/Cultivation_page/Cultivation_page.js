@@ -4,10 +4,83 @@ import cultivation from '../Images/cultivation.jpg';
 import cultivation1 from '../Images/cultivation1.png';
 import cultivation2 from '../Images/cultivation2.jpg';
 import cultivation3 from '../Images/cultivation3.jpeg';
+import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import FooterPage from '../Footer/Footer';
 
 class Cultivation_page extends Component {
+  onHandleClicks = (e) => {
+    const payload = {
+      Machine_Name: "Potato Cultivater",
+      Price: "1500"
+    }
+    const options = {
+      url: 'http://localhost:8008/Services',
+      method: 'POST',
+      data: payload
+      };
+       
+      axios(options)
+      .then(response => {
+      console.log(response.status);
+      // BrowserHistory.push('./login')
+      window.alert("booked successfully")
+      });
+      }
+      onHandleClicks1 = (e) => {
+        const payload = {
+          Machine_Name: "Cabbage Cultivater",
+          Price: "1500"
+        }
+        const options = {
+          url: 'http://localhost:8008/Services',
+          method: 'POST',
+          data: payload
+          };
+           
+          axios(options)
+          .then(response => {
+          console.log(response.status);
+          // BrowserHistory.push('./login')
+          window.alert("booked successfully")
+          });
+          }
+          onHandleClicks2 = (e) => {
+            const payload = {
+              Machine_Name: "Paddy Cultivater",
+              Price: "1500"
+            }
+            const options = {
+              url: 'http://localhost:8008/Services',
+              method: 'POST',
+              data: payload
+              };
+               
+              axios(options)
+              .then(response => {
+              console.log(response.status);
+              // BrowserHistory.push('./login')
+              window.alert("booked successfully")
+              });
+              }
+              onHandleClicks3 = (e) => {
+                const payload = {
+                  Machine_Name: "Sugarcane Cultivater",
+                  Price: "1500"
+                }
+                const options = {
+                  url: 'http://localhost:8008/Services',
+                  method: 'POST',
+                  data: payload
+                  };
+                   
+                  axios(options)
+                  .then(response => {
+                  console.log(response.status);
+                  // BrowserHistory.push('./login')
+                  window.alert("booked successfully")
+                  });
+                  }
     render() {
         return (
             <div>
@@ -23,8 +96,8 @@ class Cultivation_page extends Component {
   <p class="card-text">The potato is the largest vegetable which very quickly required mechanized planting, 
   first of all using simple planters with cups on a belt. This was followed by belt planters with electronic control for
    high speed planting.</p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClicks}>Book Now</a>
+  <button class="btn btn-info" id="hour3">1500/hr</button>
 </div>
 </div>
 </div>
@@ -39,8 +112,8 @@ class Cultivation_page extends Component {
   <p class="card-text">Weed control machine that uses computer 
   technology and a spinning blade to remove weeds. Note the disc-shaped cultivation blade with a notched cut-out to
    allow the blade to spin around transplanted cabbage.</p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClicks1}>Book Now</a>
+  <button class="btn btn-info" id="hour3">1500/hr</button>
 </div>
 </div>
 </div>
@@ -56,8 +129,8 @@ class Cultivation_page extends Component {
   different methods with different level of water and labour requirement. If you want to do rice cultivation then 
   here is the complete guide on scientifically.
  </p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClicks2}>Book Now</a>
+  <button class="btn btn-info" id="hour3">1500/hr</button>
 </div>
 </div>
 </div>
@@ -73,8 +146,8 @@ class Cultivation_page extends Component {
   This can be lifted or lowered by the hydraulic system of the tractor.If you want to do cultivation then 
   here is the complete guide on scientifically.
  </p>
-  <a href="LoginPage" class="btn btn-success">Book Now</a>
-  <button class="btn btn-danger">1500/hr</button>
+  <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClicks3}>Book Now</a>
+  <button class="btn btn-info" id="hour3">1500/hr</button>
 </div>
 </div>
 </div>

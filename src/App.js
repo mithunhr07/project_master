@@ -15,6 +15,7 @@ import Payment_page from './Components/Payment_page/Payment_page';
 import Admintable from './Components/AdminPage/Admintable';
 import Adminform from './Components/AdminPage/Adminform';
 import Checkoutform from './Components/CheckoutForm/CheckoutForm';
+import Forgetpassword from './Components/LoginPage/Forgetpassword';
 
 const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
   <Route
@@ -35,6 +36,7 @@ class App extends Component {
             {/* <Route exact path='/' component={Calendar_page}></Route> */}
 
             <Route exact path='/LoginPage' component={LoginPage}></Route>
+            <Route exact path='/forget' component={Forgetpassword}></Route>
             <Route exact path='/RegisterPage' component={RegisterPage}></Route>
             <Route exact path='/' component={HomePage}></Route>
             <Route exact path='/Planting_machines' component={Planting_machines}></Route>
@@ -44,11 +46,11 @@ class App extends Component {
             <Route exact path='/Miscellaneous_page' component={Miscellaneous_page}></Route>
             <Route exact path='/About_page' component={About_page}></Route>
             <Route exact path='/Contact_page' component={Contact_page}></Route>
-            < PrivateRoute exact path='/Payment_page' component={Payment_page}></ PrivateRoute>
-            < PrivateRoute exact path='/Calendar' component={Calendar_page}></ PrivateRoute>
-            < PrivateRoute exact path='/Checkoutform' component={Checkoutform}></ PrivateRoute>
-            < PrivateRoute exact path='/admintable' component={Admintable}></ PrivateRoute>
-            < PrivateRoute exact path='/adminform' component={Adminform}></  PrivateRoute>
+            <Route exact path='/Payment_page' component={Payment_page}></Route>
+            <Route exact path='/Calendar' component={Calendar_page}></ Route>
+            < Route exact path='/Checkoutform' component={Checkoutform}></ Route>
+            < Route exact path='/admintable' component={Admintable}></ Route>
+            < Route exact path='/adminform' component={Adminform}></  Route>
             </Switch>
           </Router>
 

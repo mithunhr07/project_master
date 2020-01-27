@@ -26,7 +26,7 @@ class Payment_page extends Component {
       address:'',
       city:'',
       state:'',
-      showMe:false
+      showMe:true
     };
 }
 Operation()
@@ -78,14 +78,13 @@ render() {
                <button onClick={this.onHandleClicks} className="btn_align" onClick={()=>this.Operation()}><b>Next</b></button>
             </div>
           </div>
-             {this.state.showMe?
-                <div class="col"  id="backgr_color" className="container_width">
+          
+                <div class="col" hidden={this.state.showMe}  id="backgr_color" >
+                {/* <div hidden={this.state.showMe}> */}
                   <Admintable/>
                   <Checkoutform/>
-                </div>
-                :null}
-          
-
+                  </div>
+                {/* </div>         */}
               </div>
               <FooterPage/>
       </div>

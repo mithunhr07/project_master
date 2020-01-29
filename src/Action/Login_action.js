@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Cookies from 'js-cookie'
 import BrowserHistory from '../Components/Utils/BrowserHistory'
 export function loginHandle(payload) {
 const options = {
@@ -22,7 +23,14 @@ alert("Incorrect password")
 else {
 const LoginDet = JSON.stringify({'token':response.data.token, 'userId': response.data.userId});
 sessionStorage.setItem('LOGINDETAILS', LoginDet);
-BrowserHistory.push('/Payment_page')
+sessionStorage.setItem('role', response.data.role);
+Cookies.set("role",response.data.role)
+console.log(response.data.role)
+if("admin"===sessionStorage.getItem('role'))
+BrowserHistory.push('/Adminform')
+else{
+    BrowserHistory.push('/payment_page')
+}
 }
 })
 .catch(error=>{

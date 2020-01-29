@@ -28,6 +28,7 @@ height: 658px;
 .btn1align{
     height: 20px;
     background-color:lightblue;
+    margin-left: 20px;
 }
 .cancelbtn{
     margin-left:8px;
@@ -41,4 +42,7 @@ height: 658px;
     height: 500px;
     width: 1200px;
     
+}
+#forgetpassword{
+    color: red;
 }

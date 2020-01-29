@@ -21,7 +21,9 @@ class Calendar_page extends React.Component {
         return(
             <div className="example-wrapper" id="calendar">
                <DateTimePicker />
+               
                <button onClick={this.onHandleClicks} className="btn_align"><b>Next</b></button>
+  
             </div>
         )
     }

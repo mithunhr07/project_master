@@ -36,7 +36,7 @@ class Forgetpassword extends Component {
             <div className="frgtpassw">
             <label>New Password</label><br/>
             <input type="text" onChange={this.handlechange} placeholder="enter new password"></input><br/><br/>
-        <button onClick={this.changepassw} name="password" className="btn btn-danger">change password</button>
+        <button onClick={this.changepassw} name="password" class="btn btn-danger">change password</button>
         </div>
         </div>
         );

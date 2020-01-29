@@ -16,7 +16,7 @@ import '@progress/kendo-react-common'
 import '@progress/kendo-react-popup'
 import '@progress/kendo-date-math'
 import '@progress/kendo-react-dropdowns'
-
+import Cookies from 'js-cookie'
 class Payment_page extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +26,8 @@ class Payment_page extends Component {
       address:'',
       city:'',
       state:'',
-      showMe:true
+      showMe:true,
+      date:""
     };
 }
 Operation()
@@ -34,6 +35,10 @@ Operation()
 this.setState({
 showMe:!this.state.showMe
 })
+Cookies.set('date', this.state.date);
+}
+date=(e)=>{
+  this.setState({[e.target.name]:e.target.value});
 }
 onHandleChange=(e)=>{
         this.setState({[e.target.name]:e.target.value});
@@ -71,20 +76,17 @@ render() {
             <div class="col">
             <img src={pay} className="payment_img"></img>
           </div>
-          
           <div class="col">
           <div className="example-wrapper" id="calendar">
-               <DateTimePicker />
+               {/* <DateTimePicker /> */}
+               <input type="date" name="date" onChange={this.date}></input>
                <button onClick={this.onHandleClicks} className="btn_align" onClick={()=>this.Operation()}><b>Next</b></button>
             </div>
           </div>
-          
-                <div class="col" hidden={this.state.showMe}  id="backgr_color" >
-                {/* <div hidden={this.state.showMe}> */}
+          <div class="col" hidden={this.state.showMe}  id="backgr_color" >
                   <Admintable/>
                   <Checkoutform/>
                   </div>
-                {/* </div>         */}
               </div>
               <FooterPage/>
       </div>

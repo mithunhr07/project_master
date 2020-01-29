@@ -5,7 +5,7 @@ import BrowserHistory from "../Utils/BrowserHistory";
 import { questionHandle } from '../../Action/Admin_action';
 import './Admintable.css';
 import { connect } from 'react-redux'
-
+import Cookies from 'js-cookie'
 class Admintable extends Component {
 constructor(props) {
 super(props);
@@ -80,10 +80,10 @@ const payload = {
 SIno: this.state.SIno,
 UserName: this.state.UserName,
 UserAddress: this.state.UserAddress,
-Machinery_Name: this.state.Machinery_Name,
-Hours: this.state.Hours ,
-Price: this.state.Price,
-Rent_On_Date: this.state.Rent_On_Date,
+Machinery_Name: Cookies.get('Machinery_Name'),
+Hours: "2hr" ,
+Price: Cookies.get('Price'),
+Rent_On_Date: Cookies.get('date'),
 email_id: this.state.email_id,
 MobileNo: this.state.MobileNo
 };
@@ -98,14 +98,14 @@ return (
 <form onSubmit={this.onSubmit}>
 
 <div>
-    <h1 className="billingtext">Billing_Form</h1>
+    <h1 className="billingtext">Billing_Form</h1><br/>
 <label className="empnum1">SIno </label>
 <input type="number"
 className="empnum2"
 value={this.state.SIno}
 onChange={this.onChangeSIno}
 />
-</div>
+</div><br/>
 
 <div>
 <label className="empnum1"> UserName</label>
@@ -114,7 +114,7 @@ className="empnum01"
 value={this.state.UserName}
 onChange={this.onChangeUserName}
 />
-</div>
+</div><br/>
 
 <div>
 <label className="empnum1"> UserAddress</label>
@@ -123,7 +123,7 @@ className="empnum3"
 value={this.state.UserAddress}
 onChange={this.onChangeUserAddress}
 />
-</div>
+</div><br/>
 
 {/* <div>
 <label className="empnum1"> Machinery_Name</label>
@@ -168,7 +168,7 @@ className="empnum8"
 value={this.state.email_id}
 onChange={this.onChangeemail_id}
 />
-</div>
+</div><br/>
 
 <div>
 <label className="empnum1"> MobileNo</label>
@@ -177,7 +177,7 @@ className="empnum9"
 value={this.state.MobileNo}
 onChange={this.onChangeMobileNo}
 />
-</div>
+</div><br/>
 
 <div className="form-group">
 <button type="submit" value="send" id="sendbttn" onClick={this.onSubmit} class="btn btn-primary">Send</button>

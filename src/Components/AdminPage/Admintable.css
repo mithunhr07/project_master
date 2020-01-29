@@ -1,29 +1,36 @@
 .empnum1{
     margin-left: 23px;
+    font-size: 12px;
 }
 .empnum01{
-    margin-left: 11px;
+    margin-left: 15px;
+    width: 200px;
 }
 .empnum2{
-    margin-left: 40px;
+    margin-left: 48px;
+    width: 200px;
 }
 .empnum3{
     margin-left: 01px;
+    width: 200px;
 }
 .empnum8{
-    margin-left: 22px;
+    margin-left: 27px;
+    width: 200px;
 }
 .empnum9{
-    margin-left: 16px;
+    margin-left: 18px;
+    width: 200px;
 }
 .billingtext{
     margin-left: 88px;
+    margin-top: 20px;
 }
 #resetbttn{
     margin-left: 15px;
-    width: 50px;
+    width: 90px;
 }
 #sendbttn{
     margin-left: 105px;
-    width: 50px;
+    width: 90px;
 }

@@ -20,34 +20,33 @@ import Cookies from 'js-cookie'
 class Payment_page extends Component {
   constructor(props) {
     super(props);
-    this.state={
-      firstname:'',
-      email:'',
-      address:'',
-      city:'',
-      state:'',
-      showMe:true,
-      date:""
+    this.state = {
+      firstname: '',
+      email: '',
+      address: '',
+      city: '',
+      state: '',
+      showMe: true,
+      date: ""
     };
-}
-Operation()
-{
-this.setState({
-showMe:!this.state.showMe
-})
-Cookies.set('date', this.state.date);
-}
-date=(e)=>{
-  this.setState({[e.target.name]:e.target.value});
-}
-onHandleChange=(e)=>{
-        this.setState({[e.target.name]:e.target.value});
-    }
-    // onHandleClicks = (e) => {
+  }
+  Operation() {
+    this.setState({
+      showMe: !this.state.showMe
+    })
+    Cookies.set('date', this.state.date);
+  }
+  date = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+  onHandleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+  // onHandleClicks = (e) => {
 
-    //   BrowserHistory.push('/Admintable'); 
-      
-    //   }
+  //   BrowserHistory.push('/Admintable'); 
+
+  //   }
   //   onHandleClick=()=>{
   //     debugger;
   //     const payload={Fullname:this.state.firstname,email:this.state.email,Address:this.state.address,
@@ -62,33 +61,33 @@ onHandleChange=(e)=>{
   //         axios(options)
   //         .then(response => {
   //         console.log(response.status);
-        
+
   //       });
   // }
 
-render() {
+  render() {
     return (
       <div>
-        <Navbar/>
-          <h4 className="bill_text">Easiest Way to Pay the Bill</h4>
-          <p className="service_text">For your professional services</p>
-          <div class="row">
-            <div class="col">
+        <Navbar />
+        <h4 className="bill_text">Easiest Way to Pay the Bill</h4>
+        <p className="service_text">For your professional services</p>
+        <div class="row">
+          <div class="col">
             <img src={pay} className="payment_img"></img>
           </div>
           <div class="col">
-          <div className="example-wrapper" id="calendar">
-               {/* <DateTimePicker /> */}
-               <input type="date" name="date" onChange={this.date}></input>
-               <button onClick={this.onHandleClicks} className="btn_align" onClick={()=>this.Operation()}><b>Next</b></button>
+            <div className="example-wrapper" id="calendar">
+              {/* <DateTimePicker /> */}
+              <input type="date" name="date" onChange={this.date}></input>
+              <button onClick={this.onHandleClicks} className="btn_align" onClick={() => this.Operation()}><b>Next</b></button>
             </div>
           </div>
-          <div class="col" hidden={this.state.showMe}  id="backgr_color" >
-                  <Admintable/>
-                  <Checkoutform/>
-                  </div>
-              </div>
-              <FooterPage/>
+          <div class="col" hidden={this.state.showMe} id="backgr_color" >
+            <Admintable />
+            <Checkoutform />
+          </div>
+        </div>
+        <FooterPage />
       </div>
     );
   }

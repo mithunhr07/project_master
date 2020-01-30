@@ -35,14 +35,13 @@ height: 658px;
 }
 .frgtpassw{
     margin-left: 530px;
-    /* margin-top: 200px; */
 }
 .forgetbackground{
-    background:url('../Images/forget.jpg') no-repeat;
-    height: 500px;
-    width: 1200px;
-    
+    background:url('../Images/unlockimg.jpg') no-repeat;
+    height: 1000px;
+    width: 1000px;
 }
 #forgetpassword{
     color: red;
+    margin-top: 100px;
 }

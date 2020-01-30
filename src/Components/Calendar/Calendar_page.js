@@ -14,16 +14,16 @@ import '@progress/kendo-react-dropdowns'
 class Calendar_page extends React.Component {
     onHandleClicks = (e) => {
 
-        BrowserHistory.push('/Payment_page'); 
-        
-        }
+        BrowserHistory.push('/Payment_page');
+
+    }
     render() {
-        return(
+        return (
             <div className="example-wrapper" id="calendar">
-               <DateTimePicker />
-               
-               <button onClick={this.onHandleClicks} className="btn_align"><b>Next</b></button>
-  
+                <DateTimePicker />
+
+                <button onClick={this.onHandleClicks} className="btn_align"><b>Next</b></button>
+
             </div>
         )
     }

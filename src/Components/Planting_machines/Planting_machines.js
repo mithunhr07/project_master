@@ -12,25 +12,25 @@ class Planting_machines extends Component {
   onHandleClick = (e) => {
     Cookies.set('Machinery_Name', 'potato planter')
     Cookies.set('Hours', '2hrs')
-    Cookies.set('Price', '1500rs')
+    Cookies.set('Price', '1500rs/hr')
 
   }
   onHandleClick1 = (e) => {
     Cookies.set('Machinery_Name', 'AgriMec Planter')
-    Cookies.set('Hours', '2hrs')
-    Cookies.set('Price', '1500rs')
+    Cookies.set('Hours', '1.5hrs')
+    Cookies.set('Price', '1400rs/hr')
 
   }
   onHandleClick2 = (e) => {
     Cookies.set('Machinery_Name', 'Seed Drill')
-    Cookies.set('Hours', '2hrs')
+    Cookies.set('Hours', '3hrs')
     Cookies.set('Price', '1200rs')
 
   }
   onHandleClick3 = (e) => {
     Cookies.set('Machinery_Name', 'Pneu Planter')
-    Cookies.set('Hours', '2hrs')
-    Cookies.set('Price', '1500rs')
+    Cookies.set('Hours', '1hrs')
+    Cookies.set('Price', '1500rs/hr')
 
   }
   render() {
@@ -48,7 +48,7 @@ class Planting_machines extends Component {
                   <p class="card-text">It is mounted on 3 points linkage system,takes the motion from its own wheel.
        you can work on the light soil and heavy soil at 5km/h.</p>
                   <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick}>Book Now</a>
-                  <button class="btn btn-info" id="hour">1500/hr</button>
+                  <button class="btn btn-info" id="hour">1500rs/hr</button>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@ class Planting_machines extends Component {
                   <p class="card-text">It is an Universal Type can be used for cotton, corn,
         soy bean, etc.It is maintenance free machine and it is lower model of pneumatic seed drill.</p>
                   <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick1}>Book Now</a>
-                  <button class="btn btn-info" id="hour">1400/hr</button>
+                  <button class="btn btn-info" id="hour">1400rs/hr</button>
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@ class Planting_machines extends Component {
                      similar seeds together with fertilizer and depth continuously,thus how it works with supported machine. Click below to book now.
      </p>
                   <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick2}>Book Now</a>
-                  <button class="btn btn-info" id="hour">1200/hr</button>
+                  <button class="btn btn-info" id="hour">1200rs/hr</button>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ class Planting_machines extends Component {
                    in any sowing space and at any row space.
      </p>
                   <a href="LoginPage" class="btn btn-danger" onClick={this.onHandleClick3}>Book Now</a>
-                  <button class="btn btn-info" id="hour">1500/hr</button>
+                  <button class="btn btn-info" id="hour">1500rs/hr</button>
                 </div>
               </div>
             </div>
